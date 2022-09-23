@@ -30,8 +30,8 @@ def make_palindrome():
     num1 = 999
     num2 = 999
 
-    while num1 > 100:
-        while num2 > 100:
+    while num1 > 99:
+        while num2 > 99:
             result = num1 * num2
             if is_palindrome(result):
                 if result > biggest:
