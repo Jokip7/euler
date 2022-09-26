@@ -13,19 +13,11 @@ def is_divisible(number: int) -> bool:
 
 def find_smallest():
     number = MAX
-    for i in range(int(MAX / 2) + 1, MAX):
-        number = number * i
 
-    smallest = 0
+    while not is_divisible(number):
+        number += MAX
 
-    while number > MAX:
-        if is_divisible(number):
-            smallest = number
-            number = int(number / 2)
-        else:
-            number -= MAX
-
-    print(f"Smallest multiple is {smallest}")
+    print(f"Smallest multiple is {number}")
 
 
 find_smallest()
